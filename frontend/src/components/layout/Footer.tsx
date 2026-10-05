@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-import { Layers } from 'lucide-react';
+import { ThariLogo } from '../ui/ThariLogo';
 
 export const Footer: React.FC = () => {
   const { t, language } = useLanguage();
@@ -10,8 +10,8 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2 space-y-3">
-            <div className="flex items-center gap-2 text-white font-bold text-base">
-              <Layers className="w-5 h-5 text-amber-400" />
+            <div className="flex items-center gap-2.5 text-white font-bold text-base">
+              <ThariLogo size="sm" withText={false} iconClassName="!bg-slate-800 !border-slate-700" />
               <span>{t('app.name', 'Jacquard Work Management Platform')}</span>
             </div>
             <p className="text-slate-400 text-xs leading-relaxed max-w-md">

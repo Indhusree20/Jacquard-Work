@@ -10,6 +10,7 @@ import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
 import { Card, CardContent } from '../../components/ui/Card';
 import { ThariWatermark } from '../../components/ui/ThariWatermark';
+import { ThariLogo } from '../../components/ui/ThariLogo';
 import {
   Building2,
   Wrench,
@@ -200,7 +201,10 @@ export const RegisterPage: React.FC = () => {
 
       <div className="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8 relative z-10">
         <div className="max-w-2xl w-full space-y-6">
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-3">
+            <div className="flex justify-center">
+              <ThariLogo size="xl" textPosition="bottom" />
+            </div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/70 border border-amber-300/60 text-amber-900 text-xs font-bold shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-amber-700" />
               <span>{language === 'ta' ? 'புதிய பதிவு' : 'New Artisan & Weaver Network'}</span>

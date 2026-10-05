@@ -5,6 +5,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { LanguageSelector } from '../ui/LanguageSelector';
 import { NotificationDropdown } from '../ui/NotificationDropdown';
 import { Button } from '../ui/Button';
+import { ThariLogo } from '../ui/ThariLogo';
 import { Menu, LogOut, User, Sparkles, Shield, ChevronDown } from 'lucide-react';
 
 export const Navbar: React.FC<{ onMobileMenuToggle?: () => void }> = ({ onMobileMenuToggle }) => {
@@ -36,23 +37,8 @@ export const Navbar: React.FC<{ onMobileMenuToggle?: () => void }> = ({ onMobile
                 <Menu className="w-5 h-5" />
               </button>
             )}
-            <Link to={isAuthenticated ? getDashboardPath() : '/'} className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-950 via-indigo-900 to-amber-800 flex items-center justify-center text-white shadow-craft-xs group-hover:scale-105 transition-transform">
-                {/* Micro Thari Loom Vector Logo */}
-                <svg className="w-5 h-5 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M4 3v18M20 3v18M2 6h20M2 18h20" strokeLinecap="round" />
-                  <path d="M8 6v12M12 6v12M16 6v12" strokeDasharray="2 2" strokeWidth="1.5" />
-                  <path d="M5 12h14" stroke="#f59e0b" strokeWidth="2.5" />
-                </svg>
-              </div>
-              <div>
-                <span className="font-black text-base sm:text-lg tracking-tight text-slate-900 block leading-none">
-                  {language === 'ta' ? 'ஜாகார்ட் தளம்' : 'JacquardWork'}
-                </span>
-                <span className="text-[10px] text-amber-800 font-bold tracking-wider uppercase block mt-0.5">
-                  {language === 'ta' ? 'பாரம்பரிய கைத்தறி இணைப்பு' : 'Handloom Ecosystem'}
-                </span>
-              </div>
+            <Link to={isAuthenticated ? getDashboardPath() : '/'} className="group hover:opacity-95 transition-opacity">
+              <ThariLogo size="md" />
             </Link>
           </div>
 

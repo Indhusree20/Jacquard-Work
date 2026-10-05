@@ -7,6 +7,7 @@ import { Navbar } from '../../components/layout/Navbar';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
 import { Card, CardContent } from '../../components/ui/Card';
+import { ThariLogo } from '../../components/ui/ThariLogo';
 import { Lock, Mail, ShieldAlert, Sparkles, UserCheck, Wrench, Building2 } from 'lucide-react';
 
 export const LoginPage: React.FC = () => {
@@ -59,8 +60,11 @@ export const LoginPage: React.FC = () => {
 
       <div className="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8 relative z-10">
         <div className="max-w-md w-full space-y-6">
-          {/* Header */}
-          <div className="text-center space-y-2">
+          {/* Header with Official Thari Logo */}
+          <div className="text-center space-y-3">
+            <div className="flex justify-center">
+              <ThariLogo size="xl" textPosition="bottom" />
+            </div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/70 border border-amber-300/60 text-amber-900 text-xs font-bold shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-amber-700" />
               <span>{language === 'ta' ? 'பாரம்பரிய கைத்தறி போர்டல்' : 'Traditional Handloom Portal'}</span>
