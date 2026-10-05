@@ -1,0 +1,27 @@
+{
+  "name": "jacquard-work-platform",
+  "version": "1.0.0",
+  "description": "Production-oriented full-stack Jacquard Work Management Platform for traditional handloom weavers and artisans",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "seed": "cd backend && npm run seed",
+    "test:backend": "cd backend && npm test",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend"
+  },
+  "keywords": [
+    "jacquard",
+    "handloom",
+    "textile",
+    "weavers",
+    "tamil-nadu",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "Jacquard Work Platform Team",
+  "license": "MIT"
+}
